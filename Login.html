@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--Import Google Icon Font-->
+        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        
+		<!-- Compiled and minified CSS -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+        
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+
+		<!--Let browser know website is optimized for mobile-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8"/>
+    </head>
+    <body class="grey lighten-5">
+        <!--Import jQuery before materialize.js-->
+        <div class="navbar-fixed">
+			<nav>
+				<div class="nav-wrapper grey darken-4">
+					<a href="Login.html" class="brand-logo center">Login</a>
+				</div>
+			</nav>
+		</div>
+		<div class="container">
+			<!--<form class="col s12" method="POST">-->
+			<div class="row">
+				<div class="input-field col s12">
+					<input id="email" type="email" class="validate">
+					<label for="email">Email</label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="input-field col s12">
+					<input id="password" type="password" class="validate">
+					<label for="password">Senha</label>
+				</div>
+			</div>
+			<!--</form>-->
+			<div class="row center-align">
+				<a class="waves-effect waves-light btn grey darken-4" id="buttonSignIn">Login</a>
+			</div>
+			<div class="row center-align">
+				E novo?<a href="Cadastro.html"> Crie uma conta.</a>
+			</div>
+		</div>
+        
+
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <!-- Compiled and minified JavaScript -->
+  		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+        <script>
+			// Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAAMEmMrdzbqLZS2-bRY09-ahIWKklEi_E",
+    authDomain: "teste-a0555.firebaseapp.com",
+    databaseURL: "https://teste-a0555.firebaseio.com",
+    projectId: "teste-a0555",
+    storageBucket: "teste-a0555.appspot.com",
+    messagingSenderId: "504846322319"
+  };
+  firebase.initializeApp(config);
+		</script>
+		<script type="text/javascript" src="assets/js/Login.js"></script>
+    </body>
+</html>

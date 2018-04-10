@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--Import Google Icon Font-->
+        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        
+		<!-- Compiled and minified CSS -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+        
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+
+		<!--Let browser know website is optimized for mobile-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8"/>
+    </head>
+    <body class="grey lighten-5">
+        <!--Import jQuery before materialize.js-->
+        <div class="navbar-fixed">
+			<nav>
+				<div class="nav-wrapper grey darken-4">
+                    <a href="Login.html" data-activates="slide-out" class="button-collapse show-on-large"><i class="material-icons">replay</i></a>
+					<a href="Cadastro.html" class="brand-logo center">Cadastro</a>
+				</div>
+			</nav>
+        </div>
+        <div class="container">
+            <div class="row">
+                <form class="col s12">
+                    <div class="row">
+                        <div class="input-field col s12">
+                                <input id="email" type="email" class="validate">
+                                <label for="email">Email</label>
+                            </div>
+                        </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="password" type="password" class="validate">
+                            <label for="password">Senha</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="first_name" type="text" class="validate">
+                            <label for="first_name">Nome</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="cpf" type="text" class="validate">
+                            <label for="cpf">CPF</label>
+                            <input class="cpf_cnpj">
+                             <style>
+        .valido {
+            border: 1px solid green;
+        }
+        .invalido {
+            border: 1px solid red;
+        }
+        </style>
+        
+        <!-- jQuery -->
+        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+        
+        <!-- Funções para validação de CPF e CNPJ -->
+        <script src="assets/js/valida_cpf_cnpj.js"></script>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="sexo" type="text" class="validate">
+                            <label for="sexo">Sexo</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="data" type="text" class="datepicker">
+                            <label for="data">Data de nascimento</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="file-field input-field">
+                            <div class="btn grey darken-4">
+                                <span>Foto de perfil</span>
+                                <input type="file" multiple id="arquivo">
+                            </div>
+                            <div class="file-path-wrapper">
+                                <input class="file-path validate" type="text" placeholder="Upload one or more files">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <div class="row center-align">
+                    <a class="waves-effect waves-light btn grey darken-4" id="btnNovo">Cadastra</a>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <!-- Compiled and minified JavaScript -->
+  		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+        <script>
+			// Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAAMEmMrdzbqLZS2-bRY09-ahIWKklEi_E",
+    authDomain: "teste-a0555.firebaseapp.com",
+    databaseURL: "https://teste-a0555.firebaseio.com",
+    projectId: "teste-a0555",
+    storageBucket: "teste-a0555.appspot.com",
+    messagingSenderId: "504846322319"
+  };
+  firebase.initializeApp(config);
+        </script>
+        <script>
+            $(document).ready(function() {
+                $('.datepicker').pickadate({
+                    selectMonths: true, // Creates a dropdown to control month
+                    selectYears: 160, // Creates a dropdown of 15 years to control year,
+                    format: 'dd/mm/yyyy',
+                    today: 'Hoje',
+                    clear: 'Limpar',
+                    close: 'Ok',
+                    closeOnSelect: false, // Close upon selecting a date,
+                    monthsFull: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
+                    weekdaysShort: ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sab']
+                });
+            });
+        </script>
+		<script type="text/javascript" src="assets/js/Cadastro.js"></script>
+        <script src="js/valida_cpf_cnpj.js"></script>
+    </body>
+</html>
